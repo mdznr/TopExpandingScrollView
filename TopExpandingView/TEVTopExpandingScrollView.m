@@ -40,8 +40,7 @@
 			UIImage *image = [UIImage imageNamed:@"testImage"];
 			_topView = [[UIImageView alloc] initWithImage:image];
 		}
-					
-		[_topView setContentMode:UIViewContentModeCenter];
+		
 		[_topView setContentMode:UIViewContentModeScaleAspectFill]; // ***
 		[_topView setFrame:CGRectMake(frame.origin.x,
 									 frame.origin.y,
@@ -62,8 +61,8 @@
 		[_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight ];
 		[_scrollView setAutoresizesSubviews:YES];
 		
-		[self setBackgroundColor:[UIColor redColor]];
-		[self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+//		[self setBackgroundColor:[UIColor redColor]];
+//		[self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 		[self addSubview:_topView];
 		[self addSubview:_scrollView];
 		
@@ -113,14 +112,16 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+	NSLog(@"%@", NSStringFromCGRect([_topView frame]));
+	
 	int yOffset = scrollView.contentOffset.y;
 	
 	// Hits Max Height
 	if ( _maxTopViewHeight && _topViewHeight > _maxTopViewHeight + yOffset )
 	{
-		NSLog(@"Hitting Max Height %f", scrollView.contentOffset.y);
+//		NSLog(@"Hitting Max Height %f", scrollView.contentOffset.y);
 		[_topView setFrame:
-		 CGRectMake(_topView.frame.origin.x,
+		 CGRectMake(0,
 					_topViewHeight - _maxTopViewHeight - yOffset,
 					_topView.frame.size.width,
 					_maxTopViewHeight)];
@@ -129,9 +130,9 @@
 	// Hits Min Height
 	else if ( _minTopViewHeight && _minTopViewHeight + yOffset > _topViewHeight  )
 	{
-		NSLog(@"Hitting Min Height %f", scrollView.contentOffset.y);
+//		NSLog(@"Hitting Min Height %f", scrollView.contentOffset.y);
 		[_topView setFrame:
-		 CGRectMake(_topView.frame.origin.x,
+		 CGRectMake(0,
 					_topViewHeight - _minTopViewHeight - yOffset,
 					_topView.frame.size.width,
 					_minTopViewHeight)];
@@ -140,13 +141,14 @@
 	// Other
 	else if ( yOffset < _topViewHeight )
 	{
-		NSLog(@"Not hitting limits %f", scrollView.contentOffset.y);
+//		NSLog(@"Not hitting limits %f", scrollView.contentOffset.y);
 		[_topView setFrame:
-		 CGRectMake(_topView.frame.origin.x,
-					_topView.frame.origin.y,
+		 CGRectMake(0,
+					0,
 					_topView.frame.size.width,
 					_topViewHeight - yOffset)];
 	}
+	 
 }
 
 @end
