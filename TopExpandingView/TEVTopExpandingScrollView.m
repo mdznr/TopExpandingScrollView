@@ -13,6 +13,7 @@
 - (id)init
 {
 	CGSize size = [UIScreen mainScreen].bounds.size;
+	NSLog(@"%f x %f", size.width, size.height);
 	return [self initWithFrame:CGRectMake(0,
 										  0,
 										  size.width,
@@ -58,13 +59,17 @@
 		
 		[_scrollView addSubview:bottom];
 		[_scrollView setContentSize:CGSizeMake(frame.size.width, 1280)];
-		[_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight ];
+		[_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 		[_scrollView setAutoresizesSubviews:YES];
 		
-//		[self setBackgroundColor:[UIColor redColor]];
-//		[self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+		[self setBackgroundColor:[UIColor redColor]];
+		[self setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
 		[self addSubview:_topView];
 		[self addSubview:_scrollView];
+		
+		UILabel *txt = [[UILabel alloc] initWithFrame:CGRectMake(20, 180, 320, 20)];
+		[txt setText:@"This is a UIScrollView..."];
+		[_scrollView addSubview:txt];
 		
     }
     return self;
@@ -119,7 +124,7 @@
 	// Hits Max Height
 	if ( _maxTopViewHeight && _topViewHeight > _maxTopViewHeight + yOffset )
 	{
-//		NSLog(@"Hitting Max Height %f", scrollView.contentOffset.y);
+		NSLog(@"Hitting Max Height %f", scrollView.contentOffset.y);
 		[_topView setFrame:
 		 CGRectMake(0,
 					_topViewHeight - _maxTopViewHeight - yOffset,
@@ -130,7 +135,7 @@
 	// Hits Min Height
 	else if ( _minTopViewHeight && _minTopViewHeight + yOffset > _topViewHeight  )
 	{
-//		NSLog(@"Hitting Min Height %f", scrollView.contentOffset.y);
+		NSLog(@"Hitting Min Height %f", scrollView.contentOffset.y);
 		[_topView setFrame:
 		 CGRectMake(0,
 					_topViewHeight - _minTopViewHeight - yOffset,
@@ -141,7 +146,7 @@
 	// Other
 	else if ( yOffset < _topViewHeight )
 	{
-//		NSLog(@"Not hitting limits %f", scrollView.contentOffset.y);
+		NSLog(@"Not hitting limits %f", scrollView.contentOffset.y);
 		[_topView setFrame:
 		 CGRectMake(0,
 					0,

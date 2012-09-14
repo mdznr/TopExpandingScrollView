@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C90264531602D25D0075960E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9026451160179180075960E /* Default-568h@2x.png */; };
 		C95E90AC15E88E76002BCC8D /* TEVViewControlleriPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95E90AB15E88E76002BCC8D /* TEVViewControlleriPad.xib */; };
+		C95E90E315EC2064002BCC8D /* TEVViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = C95E90E215EC205A002BCC8D /* TEVViewControlleriPad.m */; };
 		C9CD7F5215E1887700EF9F45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD7F5115E1887700EF9F45 /* UIKit.framework */; };
 		C9CD7F5415E1887700EF9F45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD7F5315E1887700EF9F45 /* Foundation.framework */; };
 		C9CD7F5615E1887700EF9F45 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CD7F5515E1887700EF9F45 /* CoreGraphics.framework */; };
@@ -21,7 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9026451160179180075960E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C95E90AB15E88E76002BCC8D /* TEVViewControlleriPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TEVViewControlleriPad.xib; sourceTree = "<group>"; };
+		C95E90E115EC205A002BCC8D /* TEVViewControlleriPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEVViewControlleriPad.h; sourceTree = "<group>"; };
+		C95E90E215EC205A002BCC8D /* TEVViewControlleriPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEVViewControlleriPad.m; sourceTree = "<group>"; };
 		C9CD7F4D15E1887700EF9F45 /* TopExpandingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopExpandingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CD7F5115E1887700EF9F45 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9CD7F5315E1887700EF9F45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +62,7 @@
 		C9CD7F4215E1887700EF9F45 = {
 			isa = PBXGroup;
 			children = (
+				C9026451160179180075960E /* Default-568h@2x.png */,
 				C9CD7F5715E1887700EF9F45 /* TopExpandingView */,
 				C9CD7F5015E1887700EF9F45 /* Frameworks */,
 				C9CD7F4E15E1887700EF9F45 /* Products */,
@@ -89,6 +95,8 @@
 				C9CD7F6315E1887700EF9F45 /* TEVViewController.h */,
 				C9CD7F6415E1887700EF9F45 /* TEVViewController.m */,
 				C9CD7F6615E1887700EF9F45 /* TEVViewController.xib */,
+				C95E90E115EC205A002BCC8D /* TEVViewControlleriPad.h */,
+				C95E90E215EC205A002BCC8D /* TEVViewControlleriPad.m */,
 				C95E90AB15E88E76002BCC8D /* TEVViewControlleriPad.xib */,
 				C9CD7F6E15E188D200EF9F45 /* TEVTopExpandingScrollView.h */,
 				C9CD7F6F15E188D200EF9F45 /* TEVTopExpandingScrollView.m */,
@@ -165,6 +173,7 @@
 				C9CD7F6815E1887700EF9F45 /* TEVViewController.xib in Resources */,
 				C9D2CC8915E1CF6E00A1352A /* testImage.png in Resources */,
 				C95E90AC15E88E76002BCC8D /* TEVViewControlleriPad.xib in Resources */,
+				C90264531602D25D0075960E /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +188,7 @@
 				C9CD7F6215E1887700EF9F45 /* TEVAppDelegate.m in Sources */,
 				C9CD7F6515E1887700EF9F45 /* TEVViewController.m in Sources */,
 				C9CD7F7015E188D200EF9F45 /* TEVTopExpandingScrollView.m in Sources */,
+				C95E90E315EC2064002BCC8D /* TEVViewControlleriPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
